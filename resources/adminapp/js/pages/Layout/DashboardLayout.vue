@@ -58,6 +58,20 @@ export default {
               gate: 'user_access'
             }
           ]
+        },
+        {
+          title: 'cruds.master.title',
+          icon: 'table_view',
+          path: { name: 'master' },
+          gate: 'master_access',
+          children: [
+            {
+              title: 'cruds.project.title',
+              icon: 'table_view',
+              path: { name: 'projects.index' },
+              gate: 'project_access'
+            }
+          ]
         }
       ]
     }
