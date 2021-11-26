@@ -96,6 +96,38 @@ const routes = [
             meta: { title: 'cruds.user.title' }
           }
         ]
+      },
+      {
+        path: 'master',
+        name: 'master',
+        component: View,
+        redirect: { name: 'projects.index' },
+        children: [
+          {
+            path: 'projects',
+            name: 'projects.index',
+            component: () => import('@cruds/Projects/Index.vue'),
+            meta: { title: 'cruds.project.title' }
+          },
+          {
+            path: 'projects/create',
+            name: 'projects.create',
+            component: () => import('@cruds/Projects/Create.vue'),
+            meta: { title: 'cruds.project.title' }
+          },
+          {
+            path: 'projects/:id',
+            name: 'projects.show',
+            component: () => import('@cruds/Projects/Show.vue'),
+            meta: { title: 'cruds.project.title' }
+          },
+          {
+            path: 'projects/:id/edit',
+            name: 'projects.edit',
+            component: () => import('@cruds/Projects/Edit.vue'),
+            meta: { title: 'cruds.project.title' }
+          }
+        ]
       }
     ]
   }
