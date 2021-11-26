@@ -13,7 +13,7 @@ class CreateProjectsTable extends Migration
             $table->string('name');
             $table->string('owner');
             $table->longText('address')->nullable();
-            $table->integer('whatsapp')->nullable();
+            $table->string('whatsapp')->nullable();
             $table->date('start_date');
             $table->date('due_date');
             $table->timestamps();

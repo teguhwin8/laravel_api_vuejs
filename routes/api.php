@@ -1,5 +1,10 @@
 <?php
 
+Route::group(['prefix' => 'v1', 'as' => 'api.', 'namespace' => 'Api\V1\Admin'], function () {
+    Route::post('login', 'AuthApiController@login')->name('login');
+    Route::get('login/get', 'AuthApiController@getlogin');
+});
+
 Route::group(['prefix' => 'v1', 'as' => 'api.', 'namespace' => 'Api\V1\Admin', 'middleware' => ['auth:sanctum']], function () {
     // Abilities
     Route::apiResource('abilities', 'AbilitiesController', ['only' => ['index']]);

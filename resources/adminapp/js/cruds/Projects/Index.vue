@@ -86,7 +86,8 @@ export default {
           field: 'id',
           thComp: TranslatedHeader,
           sortable: true,
-          colStyle: 'width: 100px;'
+          colStyle: 'width: 100px;',
+          visible: false
         },
         {
           title: 'cruds.project.fields.name',
